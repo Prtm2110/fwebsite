@@ -1,7 +1,8 @@
 const express = require("express")
 const app =express()
 const mongoose = require("mongoose")
-
+const Detail=require("./models/details")
+var hbs = require('hbs');
 
 
 app.use('/static',express.static('public'))
@@ -11,7 +12,23 @@ app.use('',routes)
 //db connection
 mongoose
 .connect('mongodb://localhost/website-db')
-.then(()=>console.log("mongoDB- connected......."))
+.then(()=>{
+    console.log("mongoDB- connected.......")
+    // Detail.create({
+    //     brandName:"AW",
+    //     brandIconUrl:"",
+    //     links:[
+    //         {
+    //             label:"Home",
+    //             url:"/"
+    //         },
+    //         {
+    //             label:"Home",
+    //             url:"/services"
+    //         }
+    //     ]
+    // })
+})
 
 
 // template engine
