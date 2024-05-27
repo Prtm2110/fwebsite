@@ -5,8 +5,11 @@ const Detail=require("../models/details")
 
 routes.get('/',(request,response)=>{
     response.render("index")
-    Detail.find
+    const details = Detail.findOne({"_id":"6653ba770b12a87a0bbe77fd"})
+    console.log(details)
 })  
+
+
 routes.get('/gallary',(request,response)=>{
     response.render("gallary")
 })  
