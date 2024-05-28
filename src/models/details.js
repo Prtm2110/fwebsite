@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Detail = mongoose.Schema({
+const Detailschema = mongoose.Schema({
     brandName: String,
     brandIconUrl: String,
 
@@ -10,4 +10,4 @@ const Detail = mongoose.Schema({
 }
 ],
 });
-module.exports = mongoose.model("detail", Detail)
+module.exports = mongoose.model("detail", Detailschema)
